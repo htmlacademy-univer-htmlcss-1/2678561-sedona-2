@@ -25,70 +25,143 @@
       </nav>
     </header>
     <main class="main-container">
-      <section class="hero">
-        <h1 class="visually-hidden">Добро пожаловать в Седону</h1>
-        <img class="hero-image" src="" alt="Большой логотип города Седоны" width="1200" height="485">
+      <section class="hotels">
+        <h1 class="visually-hidden">Гостиницы Седоны</h1>
+        <form class="hotels-form" action="https://echo.htmlacademy.ru" method="post">
+          <fieldset class="hotels-filter">
+            <legend class="hotels-filter-title">Инфраструктура:</legend>
+            <ul class="hotels-filter-list">
+              <li class="hotels-filter-item">
+                <input class="hotels-filter-checkbox visually-hidden" type="checkbox" id="pool" name="pool" checked>
+                <label class="hotels-filter-label" for="pool">Бассейн</label>
+              </li>
+              <li class="hotels-filter-item">
+                <input class="hotels-filter-checkbox visually-hidden" type="checkbox" id="parking" name="parking"
+                  checked>
+                <label class="hotels-filter-label" for="parking">Парковка</label>
+              </li>
+              <li class="hotels-filter-item">
+                <input class="hotels-filter-checkbox visually-hidden" type="checkbox" id="wi-fi" name="wi-fi">
+                <label class="hotels-filter-label" for="wi-fi">Wi-Fi</label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="hotels-filter">
+            <legend class="hotels-filter-title">Тип жилья:</legend>
+            <ul class="hotels-filter-list">
+              <li class="hotels-filter-item">
+                <input class="hotels-filter-checkbox visually-hidden" type="radio" id="hotel" name="apartments-type"
+                  checked>
+                <label class="hotels-filter-label" for="hotel">Гостиница</label>
+              </li>
+              <li class="hotels-filter-item">
+                <input class="hotels-filter-checkbox visually-hidden" type="radio" id="motel" name="apartments-type">
+                <label class="hotels-filter-label" for="motel">Мотель</label>
+              </li>
+              <li class="hotels-filter-item">
+                <input class="hotels-filter-checkbox visually-hidden" type="radio" id="apartments"
+                  name="apartments-type">
+                <label class="hotels-filter-label" for="apartments">Апартаменты</label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="hotels-filter">
+            <legend class="hotels-filter-title">Стоимость, ₽:</legend>
+            <input class="hotels-filter-range" id="from" type="number" name="from" value="0" min="0" max="9000">
+            <label class="hotels-cost-range-label" for="from">От</label>
+            <input class="hotels-filter-range" id="to" type="number" name="to" value="9000" min="0" max="9000">
+            <label class="hotels-cost-range-label" for="to">До</label>
+          </fieldset>
+          <button class="button" type="submit">Применить</button>
+          <button class="button" type="reset">Сбросить</button>
+        </form>
       </section>
-      <section class="advantages">
-        <header class="advantages-header">
-          <h2 class="visually-hidden">Преимущества города Седона</h2>
-          <p class="advantages-title"><b>Седона — небольшой городок в Аризоне, <br> заслуживающий большего!</b></p>
-          <p class="advantages-text">Рассмотрим причины, по которым Седона круче, чем Гранд Каньон!</p>
+      <section class="hotels-list">
+        <header class="hotels-list-header">
+          <h2 class="hotels-list-title">Найдено гостиниц: 38</h2>
+          <form class="hotels-list-sort" action="https://echo.htmlacademy.ru" method="post">
+            <select class="hotels-list-sort-select" name="sort" id="sort">
+              <option value="cheap">Сначала дешевые</option>
+              <option value="expensive">Сначала дорогие</option>
+              <option value="popular">Сначала популярные</option>
+            </select>
+            <ul class="hotels-list-view">
+              <li class="hotels-list-view-item">
+                <input type="radio" id="tile" name="hotels-view" value="tile" checked>
+                <label class="visually-hidden" for="tile">Сетка</label>
+              </li>
+              <li class="hotels-list-view-item">
+                <input type="radio" id="slideshow" name="hotels-view" value="slideshow">
+                <label class="visually-hidden" for="slideshow">Слайдшоу</label>
+              </li>
+              <li class="hotels-list-view-item">
+                <input type="radio" id="list" name="hotels-view" value="list">
+                <label class="visually-hidden" for="list">Список</label>
+              </li>
+            </ul>
+          </form>
         </header>
-        <ul class="advantages-list">
-          <li class="advantages-item">
-            <h3 class="advantages-item-title">Настоящий городок</h3>
-            <p>Седона - не аттракцион для туристов, там течет своя жизнь</p>
+        <ul class="hotels-list-items">
+          <li class="hotels-list-item">
+            <h3 class="hotels-list-item-title">Amara Resort & Spa</h3>
+            <p class="hotels-list-item-description">Гостиница</p>
+            <p class="hotels-list-item-price">От 4000 ₽</p>
+            <a class="link" href="#">Подробнее</a>
+            <button class="hotels-list-item-button" type="button">В избранное</button>
+            <p class="hotels-list-item-stars">&#9733;&#9733;&#9733;&#9733;</p>
+            <p class="hotels-filter-item-rating">Рейтинг: 8,5</p>
           </li>
-          <li class="advantages-item">
-            <img class="advantages-item-image" src="" alt="Уютные улицы Седоны">
+          <li class="hotels-list-item">
+            <h3 class="hotels-list-item-title">Villas at Poco Diablo</h3>
+            <p class="hotels-list-item-description">Гостиница</p>
+            <p class="hotels-list-item-price">От 5000 ₽</p>
+            <a class="link" href="#">Подробнее</a>
+            <button class="hotels-list-item-button choosen-one" type="button">В избранном</button>
+            <p class="hotels-list-item-stars">&#9733;&#9733;&#9733;&#9733;</p>
+            <p class="hotels-filter-item-rating">Рейтинг: 9,2</p>
           </li>
-          <li class="advantages-item">
-            <h3 class="advantages-item-title">Небольшая площадь</h3>
-            <p class="advantages-item-text">Все достопримечательности находятся очень близко</p>
+          <li class="hotels-list-item">
+            <h3 class="hotels-list-item-title">Desert Quail Inn</h3>
+            <p class="hotels-list-item-description">Гостиница</p>
+            <p class="hotels-list-item-price">От 2500 ₽</p>
+            <a class="link" href="#">Подробнее</a>
+            <button class="hotels-list-item-button" type="button">В избранное</button>
+            <p class="hotels-list-item-stars">&#9733;&#9733;&#9733;</p>
+            <p class="hotels-filter-item-rating">Рейтинг: 6,9</p>
           </li>
-          <li class="advantages-item">
-            <h3 class="advantages-item-title">Красивая дорога</h3>
-            <p class="advantages-item-text">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
-          </li>
-          <li class="advantages-item">
-            <h3 class="advantages-item-title">Мало туристов</h3>
-            <p class="advantages-item-text">Большинство едет в Гранд Каньон и толпится там</p>
-          </li>
-          <li class="advantages-item">
-            <img class="advantages-item-image" src="" alt="Мост дьявола">
-          </li>
-          <li class="advantages-item">
-            <h3 class="advantages-item-title">Там есть мост дьявола</h3>
-            <p class="advantages-item-text">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
+          <li class="hotels-list-item">
+            <h3 class="hotels-list-item-title">GreenTree Inn</h3>
+            <p class="hotels-list-item-description">Гостиница</p>
+            <p class="hotels-list-item-price">От 1500 ₽</p>
+            <a class="link" href="#">Подробнее</a>
+            <button class="hotels-list-item-button" type="button">В избранное</button>
+            <p class="hotels-list-item-stars">&#9733;&#9733;</p>
+            <p class="hotels-filter-item-rating">Рейтинг: 5,0</p>
           </li>
         </ul>
       </section>
-      <section class="features">
-        <header class="features-header">
-          <h2 class="features-title">Приезжайте в Седону отдохнуть в комфорте и уюте!</h2>
-          <p class="features-text">Опытный персонал и качественное обслуживание!</p>
-        </header>
-        <ul class="features-list">
-          <li class="features-item">
-            <h3 class="features-item-title">Жилье</h3>
-            <p class="features-item-text">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
+      <section class="pagination">
+        <h2 class="visually-hidden">Страницы</h2>
+        <ul class="pagination-list">
+          <li class="pagination-item">
+            <a class="pagination-link" href="#">1</a>
           </li>
-          <li class="features-item">
-            <h3 class="features-item-title">Еда</h3>
-            <p class="features-item-text">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
+          <li class="pagination-item">
+            <a class="pagination-link" href="#">2</a>
           </li>
-          <li class="features-item">
-            <h3 class="features-item-title">Суверниры</h3>
-            <p class="features-item-text">Не только китайского, но и настоящего местного производства!</p>
+          <li class="pagination-item">
+            <a class="pagination-link" href="#">3</a>
+          </li>
+          <li class="pagination-item">
+            <a class="pagination-link" href="#">4</a>
+          </li>
+          <li class="pagination-item">
+            <p>...</p>
+          </li>
+          <li class="pagination-item">
+            <a class="pagination-link" href="#">10</a>
           </li>
         </ul>
-      </section>
-      <section class="booking">
-        <h2 class="booking-title">Заинтересовались?</h2>
-        <p class="booking-text">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в
-          Седоне</p>
-        <a class="link" href="#">Поиск гостиницы в Седоне</a>
       </section>
       <section class="subscribe">
         <h2 class="subscribe-title">Подпишитесь на рассылку</h2>
@@ -112,9 +185,9 @@
         </li>
       </ul>
       <a class="footer-phone" href="tel:88128121212">+7 (812) 812-12-12</a>
-        <a class="footer-logo-link" href="http://htmlacademy.ru/">
-          <img class="footer-logo" src="" alt="Логотип HTML Academy" width="115" height="34">
-        </a>
+      <a class="footer-logo-link" href="http://htmlacademy.ru/">
+        <img class="footer-logo" src="" alt="Логотип HTML Academy" width="115" height="34">
+      </a>
     </footer>
   </body>
 
