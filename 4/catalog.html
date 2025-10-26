@@ -4,6 +4,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона - Каталог</title>
+    <link rel="icon" type="image/x-icon" href="/images/icons/favicon.ico">
     <link rel="stylesheet" href="styles/styles.css">
     <base href="https://htmlacademy-univer-htmlcss-1.github.io/2678561-sedona-2/4/">
 </head>
@@ -97,16 +98,14 @@
             </select>
             <ul class="hotels-list-view">
               <li class="hotels-list-view-item">
-                <input type="radio" id="tile" name="hotels-view" value="tile" checked>
-                <label class="visually-hidden" for="tile">Сетка</label>
+                <a href="#" class="hotels-view-link hotels-view-link--active" aria-label="Показать в виде сетки">Вид:
+                  Сетка</a>
               </li>
               <li class="hotels-list-view-item">
-                <input type="radio" id="slideshow" name="hotels-view" value="slideshow">
-                <label class="visually-hidden" for="slideshow">Слайдшоу</label>
+                <a href="#" class="hotels-view-link" aria-label="Показать в виде слайдшоу">Вид: Слайдшоу</a>
               </li>
               <li class="hotels-list-view-item">
-                <input type="radio" id="list" name="hotels-view" value="list">
-                <label class="visually-hidden" for="list">Список</label>
+                <a href="#" class="hotels-view-link" aria-label="Показать в виде списка">Вид: Список</a>
               </li>
             </ul>
           </form>
@@ -119,7 +118,8 @@
             <p class="hotels-list-item-description">Гостиница</p>
             <p class="hotels-list-item-price">От 4000 ₽</p>
             <a class="button button-main button-hotel-item" href="#">Подробнее</a>
-            <button class="hotels-list-item-button button button-additional button-hotel-item" type="button">В избранное</button>
+            <button class="hotels-list-item-button button button-additional button-hotel-item" type="button">В
+              избранное</button>
             <p class="hotels-list-item-stars">&#9733;&#9733;&#9733;&#9733;</p>
             <p class="hotels-filter-item-rating">Рейтинг: 8,5</p>
           </li>
@@ -130,7 +130,8 @@
             <p class="hotels-list-item-description">Гостиница</p>
             <p class="hotels-list-item-price">От 5000 ₽</p>
             <a class="button button-main button-hotel-item" href="#">Подробнее</a>
-            <button class="hotels-list-item-button button button-choosen button-hotel-item" type="button">В избранном</button>
+            <button class="hotels-list-item-button button button-choosen button-hotel-item" type="button">В
+              избранном</button>
             <p class="hotels-list-item-stars">&#9733;&#9733;&#9733;&#9733;</p>
             <p class="hotels-filter-item-rating">Рейтинг: 9,2</p>
           </li>
@@ -141,7 +142,8 @@
             <p class="hotels-list-item-description">Гостиница</p>
             <p class="hotels-list-item-price">От 2500 ₽</p>
             <a class="button button-main button-hotel-item" href="#">Подробнее</a>
-            <button class="hotels-list-item-button button button-additional button-hotel-item" type="button">В избранное</button>
+            <button class="hotels-list-item-button button button-additional button-hotel-item" type="button">В
+              избранное</button>
             <p class="hotels-list-item-stars">&#9733;&#9733;&#9733;</p>
             <p class="hotels-filter-item-rating">Рейтинг: 6,9</p>
           </li>
@@ -152,32 +154,30 @@
             <p class="hotels-list-item-description">Гостиница</p>
             <p class="hotels-list-item-price">От 1500 ₽</p>
             <a class="link button button-main button-hotel-item" href="#">Подробнее</a>
-            <button class="hotels-list-item-button button button-additional button-hotel-item" type="button">В избранное</button>
+            <button class="hotels-list-item-button button button-additional button-hotel-item" type="button">В
+              избранное</button>
             <p class="hotels-list-item-stars">&#9733;&#9733;</p>
             <p class="hotels-filter-item-rating">Рейтинг: 5,0</p>
           </li>
         </ul>
-      </section>
-      <section class="pagination">
-        <h2 class="visually-hidden">Страницы</h2>
         <ul class="pagination-list">
-          <li class="pagination-item pagination-item-current">
+          <li class="pagination-item">
             <a class="pagination-link pagination-link-current" href="#">1</a>
           </li>
           <li class="pagination-item">
-            <a class="pagination-link" href="#">2</a>
+            <a class="pagination-link button button-additional" href="#">2</a>
           </li>
           <li class="pagination-item">
-            <a class="pagination-link" href="#">3</a>
+            <a class="pagination-link button button-additional" href="#">3</a>
           </li>
           <li class="pagination-item">
-            <a class="pagination-link" href="#">4</a>
+            <a class="pagination-link button button-additional" href="#">4</a>
           </li>
           <li class="pagination-dots">
-            <p>...</p>
+            <span>...</span>
           </li>
           <li class="pagination-item">
-            <a class="pagination-link" href="#">10</a>
+            <a class="pagination-link button button-additional" href="#">10</a>
           </li>
         </ul>
       </section>
@@ -186,7 +186,7 @@
         <p class="subscribe-text">Только полезная информация и никакого спама,<br>честное бойскаутское!</p>
         <form class="subscribe-form" action="https://echo.htmlacademy.ru" method="post">
           <input class="subscribe-email" type="email" name="email" placeholder="Ваш e-mail" required>
-          <button class="button-subscribe button button-additional" type="submit">Подписаться</button>
+          <button class="button-big button button-additional" type="submit">Подписаться</button>
         </form>
       </section>
     </main>
