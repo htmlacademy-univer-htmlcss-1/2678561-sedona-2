@@ -38,52 +38,56 @@
           <li class="breadcrumb-item">Гостиницы</li>
         </ul>
         <form class="hotels-form" action="https://echo.htmlacademy.ru" method="post">
-          <fieldset class="hotels-filter">
-            <legend class="hotels-filter-title">Инфраструктура:</legend>
-            <ul class="hotels-filter-list">
-              <li class="hotels-filter-item">
-                <input class="hotels-filter-checkbox" type="checkbox" id="pool" name="pool" checked>
-                <label class="hotels-filter-label" for="pool">Бассейн</label>
-              </li>
-              <li class="hotels-filter-item">
-                <input class="hotels-filter-checkbox" type="checkbox" id="parking" name="parking" checked>
-                <label class="hotels-filter-label" for="parking">Парковка</label>
-              </li>
-              <li class="hotels-filter-item">
-                <input class="hotels-filter-checkbox" type="checkbox" id="wi-fi" name="wi-fi">
-                <label class="hotels-filter-label" for="wi-fi">Wi-Fi</label>
-              </li>
-            </ul>
-          </fieldset>
-          <fieldset class="hotels-filter">
-            <legend class="hotels-filter-title">Тип жилья:</legend>
-            <ul class="hotels-filter-list">
-              <li class="hotels-filter-item">
-                <input class="hotels-filter-checkbox" type="radio" id="hotel" name="apartments-type" value="hotel"
-                  checked>
-                <label class="hotels-filter-label" for="hotel">Гостиница</label>
-              </li>
-              <li class="hotels-filter-item">
-                <input class="hotels-filter-checkbox" type="radio" id="motel" name="apartments-type" value="motel">
-                <label class="hotels-filter-label" for="motel">Мотель</label>
-              </li>
-              <li class="hotels-filter-item">
-                <input class="hotels-filter-checkbox" type="radio" id="apartments" name="apartments-type"
-                  value="apartments">
-                <label class="hotels-filter-label" for="apartments">Апартаменты</label>
-              </li>
-            </ul>
-          </fieldset>
-          <fieldset class="hotels-filter">
-            <legend class="hotels-filter-title">Стоимость, ₽:</legend>
-            <input class="hotels-filter-range" id="from" type="number" name="from" value="0" min="0" max="9000">
-            <label class="hotels-cost-range-label" for="from">От</label>
-            <input class="hotels-filter-range" id="to" type="number" name="to" value="9000" min="0" max="9000">
-            <label class="hotels-cost-range-label" for="to">До</label>
-          </fieldset>
-          <div class="hotels-filter-buttons">
-            <button class="button button-additional" type="submit">Применить</button>
-            <button class="button button-transparent" type="reset">Сбросить</button>
+          <div class="hotels-form-part">
+            <fieldset class="hotels-filter">
+              <legend class="hotels-filter-title">Инфраструктура:</legend>
+              <ul class="hotels-filter-list">
+                <li class="hotels-filter-item">
+                  <input class="hotels-filter-checkbox" type="checkbox" id="pool" name="pool" checked>
+                  <label class="hotels-filter-label" for="pool">Бассейн</label>
+                </li>
+                <li class="hotels-filter-item">
+                  <input class="hotels-filter-checkbox" type="checkbox" id="parking" name="parking" checked>
+                  <label class="hotels-filter-label" for="parking">Парковка</label>
+                </li>
+                <li class="hotels-filter-item">
+                  <input class="hotels-filter-checkbox" type="checkbox" id="wi-fi" name="wi-fi">
+                  <label class="hotels-filter-label" for="wi-fi">Wi-Fi</label>
+                </li>
+              </ul>
+            </fieldset>
+            <fieldset class="hotels-filter">
+              <legend class="hotels-filter-title">Тип жилья:</legend>
+              <ul class="hotels-filter-list">
+                <li class="hotels-filter-item">
+                  <input class="hotels-filter-checkbox" type="radio" id="hotel" name="apartments-type" value="hotel"
+                    checked>
+                  <label class="hotels-filter-label" for="hotel">Гостиница</label>
+                </li>
+                <li class="hotels-filter-item">
+                  <input class="hotels-filter-checkbox" type="radio" id="motel" name="apartments-type" value="motel">
+                  <label class="hotels-filter-label" for="motel">Мотель</label>
+                </li>
+                <li class="hotels-filter-item">
+                  <input class="hotels-filter-checkbox" type="radio" id="apartments" name="apartments-type"
+                    value="apartments">
+                  <label class="hotels-filter-label" for="apartments">Апартаменты</label>
+                </li>
+              </ul>
+            </fieldset>
+          </div>
+          <div class="hotels-form-part">
+            <fieldset class="hotels-filter">
+              <legend class="hotels-filter-title">Стоимость, ₽:</legend>
+              <input class="hotels-filter-range" id="from" type="number" name="from" value="0" min="0" max="9000">
+              <label class="hotels-cost-range-label" for="from">От</label>
+              <input class="hotels-filter-range" id="to" type="number" name="to" value="9000" min="0" max="9000">
+              <label class="hotels-cost-range-label" for="to">До</label>
+            </fieldset>
+            <div class="hotels-filter-buttons">
+              <button class="button button-additional" type="submit">Применить</button>
+              <button class="button button-transparent" type="reset">Сбросить</button>
+            </div>
           </div>
         </form>
       </section>
