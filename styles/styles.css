@@ -14,10 +14,25 @@
 
 /* tags */
 
+html {
+  background-color: #f2f2f2;
+}
+
 body {
-  margin: 0;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 18px;
+  width: 1200px;
+  min-height: 100vh;
+  background-color: #fff;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+main {
+  flex: 1;
+  margin-top: 2px;
 }
 
 h1 {
@@ -28,9 +43,6 @@ h1 {
 
 h2 {
   font-weight: 700;
-  text-transform: uppercase;
-  font-size: 30px;
-  line-height: 36px;
 }
 
 h3 {
@@ -46,6 +58,7 @@ p {
 
 ul {
   list-style: none;
+  padding-inline-start: 0;
 }
 
 a {
@@ -55,14 +68,51 @@ a {
   cursor: pointer;
 }
 
+fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
 /* classes */
+
+.visually-hidden {
+  display: none;
+}
+
+.h2 {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+}
+
+.main-header {
+  display: flex;
+  height: 64px;
+  justify-content: start;
+  align-items: center;
+  padding: 0 70px;
+}
+
+.main-navigation-list {
+  display: flex;
+  margin-left: 30px;
+  gap: 35px;
+}
 
 .main-navigation-item {
   font-size: 20px;
+  padding: 20px 0;
 }
 
 .main-navigation-item-active {
-  border-bottom: 2px solid #756257; /*пока не флекс, на всю ширину*/
+  border-bottom: 2px solid #756257;
+}
+
+.user-navigation {
+  display: flex;
+  margin-left: auto;
 }
 
 .button {
@@ -75,6 +125,8 @@ a {
   border-style: none;
   font-size: 16px;
   line-height: 20px;
+  padding: 8px 20px;
+  max-height: 36px;
 }
 
 .button-main {
@@ -122,6 +174,11 @@ a {
 .button-big {
   font-size: 20px;
   line-height: 36px;
+  max-height: 52px;
+}
+
+.button-booking {
+  padding: 15px 50px;
 }
 
 .hero {
@@ -130,6 +187,38 @@ a {
   background-size: cover;
   background-repeat: no-repeat;
   text-align: center;
+  height: 500px;
+}
+
+.hero-image-text {
+  margin-top: 60px;
+}
+
+.advantages-header,
+.features-header {
+  margin: 69px 0;
+}
+
+.advantages-title {
+  color: #000;
+  text-align: center;
+}
+
+.advantages-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.advantages-item,
+.features-item {
+  width: 400px;
+  height: 385px;
+}
+
+.advantages-item-image-city,
+.advantages-item-image-bridge {
+  width: 800px;
+  height: 385px;
 }
 
 .advantages-item-road {
@@ -146,15 +235,6 @@ a {
 .advantages-item-with-image {
   background-color: #82b3d3;
   color: #fff;
-}
-
-.advantages-title {
-  text-align: center;
-  color: #000;
-  font-weight: 700;
-  text-transform: uppercase;
-  font-size: 30px;
-  line-height: 36px;
 }
 
 .advantages-text,
@@ -185,6 +265,11 @@ a {
   color: #fff;
 }
 
+.features-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .features-title {
   text-align: center;
 }
@@ -192,6 +277,14 @@ a {
 .booking,
 .subscribe {
   text-align: center;
+}
+
+.booking {
+  padding: 96px 0;
+}
+
+.subscribe {
+  padding: 96px 258px 104px 258px;
 }
 
 .subscribe-email {
@@ -216,6 +309,28 @@ a {
   background-size: cover;
   background-repeat: no-repeat;
   color: #fff;
+  padding: 35px 70px 70px 70px;
+}
+
+.hotels-title {
+  margin: 0;
+}
+
+.hotels-form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hotels-form-part {
+  display: flex;
+  gap: 70px;
+}
+
+.hotels-filter-title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 26px;
 }
 
 .hotels-filter-range {
@@ -226,6 +341,32 @@ a {
 
 .catalog-to-home-link {
   color: #fff;
+}
+
+.hotels-list {
+  padding: 0 70px;
+}
+
+.hotels-list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hotels-list-sort {
+  display: flex;
+  align-items: center;
+}
+
+.hotels-list-items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.hotels-list-item {
+  border: 2px solid #e5e5e5;
+  border-radius: 4px;
 }
 
 .hotels-list-item-title {
@@ -240,6 +381,15 @@ a {
   background-color: #f2f2f2;
 }
 
+.hotels-filter-buttons {
+  display: flex;
+  flex-direction: column;
+}
+
+.pagination-list {
+  display: flex;
+}
+
 .pagination-link-current {
   background-color: #f2f2f2;
   color: #000;
@@ -249,6 +399,8 @@ a {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  height: 120px;
+  padding: 0 70px;
 }
 
 .social-list {
@@ -281,7 +433,8 @@ a {
   font-style: normal;
 }
 
-.footer-phone:hover, .footer-phone:focus {
+.footer-phone:hover,
+.footer-phone:focus {
   color: #756157;
 }
 
