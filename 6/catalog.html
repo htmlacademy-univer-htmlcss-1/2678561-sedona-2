@@ -23,10 +23,12 @@
         </ul>
       </nav>
       <ul class="user-navigation">
-        <li class="user-nav-link user-nav-link-search"><a href="#"><span class="visually-hidden">Поиск</span></a></li>
-        <li class="user-nav-link user-nav-link-favorite"><a href="#"><span class="visually-hidden">Избранное</span></a>
+        <li class="user-nav-item user-nav-item-search"><a class="user-nav-link" href="#"><span
+              class="visually-hidden">Поиск</span></a></li>
+        <li class="user-nav-item user-nav-item-favorite"><a class="user-nav-link" href="#"><span
+              class="visually-hidden">Избранное</span></a>
         </li>
-        <li><a href="#" class="link button button-main">Хочу сюда!</a></li>
+        <li><a href="#" class="button button-main">Хочу сюда!</a></li>
       </ul>
     </header>
     <main class="main-container">
@@ -90,10 +92,11 @@
                 <label class="hotels-cost-range-label" for="to">До</label>
               </div>
             </fieldset>
-            <div class="hotels-filter-buttons">
+            <fieldset class="hotels-filter hotels-filter-buttons">
+              <legend class="hotels-filter-title"><span class="hidden-buttons-legend">Кнопки фильтра</span></legend>
               <button class="button button-additional" type="submit">Применить</button>
               <button class="button button-transparent" type="reset">Сбросить</button>
-            </div>
+            </fieldset>
           </div>
         </form>
       </section>

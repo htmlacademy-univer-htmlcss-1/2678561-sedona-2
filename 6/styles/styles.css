@@ -103,7 +103,6 @@ fieldset {
 
 .main-header {
   display: flex;
-  min-height: 64px;
   justify-content: start;
   align-items: flex-start;
   padding: 0 70px;
@@ -127,12 +126,11 @@ fieldset {
 
 .main-navigation-item {
   font-size: 20px;
-  height: 64px;
 }
 
 .main-navigation-item a {
   display: block;
-  padding: 20px 0;
+  padding: 21px 0;
   color: inherit;
   text-decoration: none;
   line-height: 1;
@@ -140,35 +138,31 @@ fieldset {
 
 .main-navigation-item-active {
   border-bottom: 2px solid #756257;
-  box-sizing: border-box;
 }
 
 .user-navigation {
   display: flex;
   align-items: center;
-  margin: 0;
-  margin-top: 10px;
   margin-left: auto;
   gap: 20px;
 }
 
-.user-nav-link {
-  /* padding: 10px 12px; */
-  width: 24px;
-  height: 44px;
-  cursor: pointer;
+.user-nav-item {
+  width: 30px;
+  height: 64px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
-.user-nav-link-search {
+.user-nav-item-search {
   background-image: url("../images/icons/search.svg");
-  background-repeat: no-repeat;
-  background-position: center;
 }
 
-.user-nav-link-favorite {
+.user-nav-item-favorite {
   background-image: url("../images/icons/like.svg");
-  background-repeat: no-repeat;
-  background-position: center;
 }
 
 .button {
@@ -256,12 +250,13 @@ fieldset {
 }
 
 .advantages-header {
-  margin: 69px 0 90px 0;
+  padding: 69px 250px 90px 250px;
 }
 
 .advantages-title {
   color: #000;
   text-align: center;
+  margin-block-start: 0;
 }
 
 .advantages-list {
@@ -349,7 +344,7 @@ fieldset {
 }
 
 .features-header {
-  margin: 69px 0;
+  padding: 69px 304px;
 }
 
 .features-list {
@@ -359,6 +354,7 @@ fieldset {
 
 .features-title {
   text-align: center;
+  margin-block-start: 0;
 }
 
 .booking,
@@ -414,7 +410,7 @@ fieldset {
 }
 
 .hotels-title {
-  margin: 0;
+  margin: 0 0 8px 0;
 }
 
 .breadcrumb {
@@ -425,6 +421,11 @@ fieldset {
   margin-bottom: 40px;
   padding: 0;
   list-style: none;
+}
+
+.breadcrumb-item-current {
+  font-size: 16px;
+  line-height: 21px;
 }
 
 .breadcrumb-item-home {
@@ -466,10 +467,20 @@ fieldset {
   gap: 70px;
 }
 
+.hotels-filter legend {
+  margin-bottom: 32px;
+}
+
 .hotels-filter-title {
   font-weight: 700;
   font-size: 20px;
   line-height: 26px;
+}
+
+.hotels-filter-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
 .hotels-filter-range {
@@ -478,8 +489,27 @@ fieldset {
   line-height: 24px;
 }
 
+.hidden-buttons-legend {
+  visibility: hidden;
+}
+
 .catalog-to-home-link {
   color: #fff;
+}
+
+.hotels-list {
+  padding: 50px 70px 60px 70px;
+}
+
+.hotels-list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.hotels-list-title {
+  margin: 0;
 }
 
 .hotels-list-view {
@@ -516,14 +546,10 @@ fieldset {
   background-image: url("../images/icons/list.svg");
 }
 
-.hotels-list {
-  padding: 30px 70px 60px 70px;
-}
-
-.hotels-list-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.hotels-view-link,
+.user-nav-link {
+  width: 100%;
+  height: 100%;
 }
 
 .hotels-list-sort {
@@ -537,7 +563,6 @@ fieldset {
   flex-wrap: wrap;
   border-bottom: 2px solid #e5e5e5;
   padding-bottom: 30px;
-  /* margin-bottom: 30px; */
 }
 
 .hotels-list-item {
@@ -568,7 +593,6 @@ fieldset {
   text-transform: none;
 }
 
-
 .hotels-filter-item-rating {
   text-transform: uppercase;
   color: #333333;
@@ -580,6 +604,9 @@ fieldset {
 .hotels-filter-buttons {
   display: flex;
   flex-direction: column;
+  gap: 32px;
+  align-items: center;
+  justify-content: center;
 }
 
 .pagination-list {
@@ -610,11 +637,11 @@ fieldset {
   align-items: center;
   width: 100%;
   height: 100%;
-  color: #fff;;
+  color: #fff;
 }
 
 .pagination-link-current {
-  color: #000;;
+  color: #000;
 }
 
 .pagination-dots {
@@ -626,17 +653,17 @@ fieldset {
   cursor: default;
 }
 
-
 .main-footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 120px;
   padding: 0 70px;
 }
 
 .social-list {
   display: flex;
+  flex-wrap: wrap;
+  width: 300px;
 }
 
 .social-item {
@@ -659,6 +686,10 @@ fieldset {
   background-image: url("../images/logos/youtube.svg");
 }
 
+.footer-contact {
+  padding: 40px 0;
+}
+
 .footer-phone {
   font-size: 40px;
   font-weight: 400;
@@ -674,4 +705,8 @@ fieldset {
 .footer-phone:active {
   color: #756157;
   opacity: 0.3;
+}
+
+.footer-logo-link {
+  margin-left: 150px;
 }
