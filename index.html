@@ -22,8 +22,9 @@
         </ul>
       </nav>
       <ul class="user-navigation">
-        <li class="user-nav-link"><a href="#"><img src="" alt="Поиск"></a></li>
-        <li class="user-nav-link"><a href="#"><img src="" alt="Избранное"></a></li>
+        <li class="user-nav-item user-nav-item-search"><a class="user-nav-link" href="#"><span class="visually-hidden">Поиск</span></a></li>
+        <li class="user-nav-item user-nav-item-favorite"><a class="user-nav-link" href="#"><span class="visually-hidden">Избранное</span></a>
+        </li>
         <li><a href="#" class="button button-main">Хочу сюда!</a></li>
       </ul>
     </header>
@@ -42,6 +43,7 @@
         <ul class="advantages-list">
           <li class="advantages-item advantages-item-with-image">
             <h3 class="advantages-item-title">Настоящий городок</h3>
+            <div class="advantages-item-divider advantages-item-divider-with-image"></div>
             <p class="advantages-item-text advantages-item-text-with-image">Седона - не аттракцион для туристов, там
               течет своя жизнь</p>
           </li>
@@ -51,14 +53,17 @@
           </li>
           <li class="advantages-item advantages-item-area">
             <h3 class="advantages-item-title">Небольшая площадь</h3>
+            <div class="advantages-item-divider"></div>
             <p class="advantages-item-text">Все достопримечательности находятся очень близко</p>
           </li>
           <li class="advantages-item advantages-item-road">
             <h3 class="advantages-item-title">Красивая дорога</h3>
+            <div class="advantages-item-divider"></div>
             <p class="advantages-item-text">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
           </li>
           <li class="advantages-item advantages-item-tourists">
             <h3 class="advantages-item-title">Мало туристов</h3>
+            <div class="advantages-item-divider"></div>
             <p class="advantages-item-text">Большинство едет в Гранд Каньон и толпится там</p>
           </li>
           <li class="advantages-item advantages-item-image-bridge">
@@ -67,6 +72,7 @@
           </li>
           <li class="advantages-item advantages-item-with-image">
             <h3 class="advantages-item-title">Там есть мост дьявола</h3>
+            <div class="advantages-item-divider advantages-item-divider-with-image"></div>
             <p class="advantages-item-text advantages-item-text-with-image">Да, по нему можно пройти! Если вы
               осмелитесь, разумеется</p>
           </li>
@@ -93,18 +99,23 @@
         </ul>
       </section>
       <section class="booking">
-        <h2 class="booking-title h2">Заинтересовались?</h2>
-        <p class="booking-text">Укажите предполагаемые даты поездки,<br>и мы покажем вам лучшие предложения гостиниц в
-          Седоне</p>
+        <div class="booking-info">
+          <h2 class="booking-title h2">Заинтересовались?</h2>
+          <p class="booking-text">Укажите предполагаемые даты поездки,<br>и мы покажем вам лучшие предложения гостиниц в
+            Седоне</p>
+        </div>
         <a class="button button-main button-big button-booking" href="#">Поиск гостиницы в Седоне</a>
       </section>
       <section class="subscribe subscribe-with-background">
-        <h2 class="subscribe-title h2">Подпишитесь на рассылку</h2>
-        <p class="subscribe-text subscribe-text-with-background">Только полезная информация и никакого спама,<br>честное
-          бойскаутское!</p>
+        <div class="subscribe-info">
+          <h2 class="subscribe-title h2">Подпишитесь на рассылку</h2>
+          <p class="subscribe-text subscribe-text-with-background">Только полезная информация и никакого
+            спама,<br>честное
+            бойскаутское!</p>
+        </div>
         <form class="subscribe-form" action="https://echo.htmlacademy.ru" method="post">
           <input class="subscribe-email" type="email" name="email" placeholder="Ваш e-mail" required>
-          <button class="button-big button button-additional" type="submit">Подписаться</button>
+          <button class="button-big button button-additional button-subscribe" type="submit">Подписаться</button>
         </form>
       </section>
     </main>
