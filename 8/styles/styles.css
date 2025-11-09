@@ -83,6 +83,15 @@ svg {
   fill: #83b3d3;
 }
 
+select {
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: transparent;
+  background-image: url("../images/icons/arrow-down.svg");
+  background-position: right 20px center;
+  background-repeat: no-repeat;
+}
+
 /* classes */
 
 .visually-hidden {
@@ -176,7 +185,7 @@ svg {
 .user-nav-favorite-count {
   position: absolute;
   top: 10px;
-  right: -3px;
+  right: 4px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -486,11 +495,27 @@ svg {
   border: 2px solid #e5e5e5;
   border-radius: 4px;
   cursor: pointer;
-  font-size: 16px;
-  line-height: 20px;
-  padding: 8px 20px;
+  font-size: 18px;
+  line-height: 16px;
+  font-weight: 400;
+  color: #333333;
+  padding: 14px 20px;
   width: 292px;
   height: 48px;
+}
+
+.hotels-list-sort-select:focus,
+.hotels-list-sort-select:hover {
+  border-color: #68A2CA;
+  outline: none;
+}
+
+.hotels-list-sort-select:disabled {
+  opacity: 0.3;
+}
+
+.hotels-view-link {
+  outline-color: #68a2ca;
 }
 
 .hotels-form {
@@ -530,10 +555,6 @@ svg {
   visibility: hidden;
 }
 
-.catalog-to-home-link {
-  color: #fff;
-}
-
 .hotels-list {
   padding: 50px 70px 60px 70px;
 }
@@ -569,11 +590,7 @@ svg {
 
 .hotels-list-view-item-active,
 .hotels-list-view-item:hover {
-  border-color: #000;
-}
-
-.hotels-list-view-item:focus{
-  border-color: #68A2CA;
+  border-color: #000; 
 }
 
 .hotels-list-view-item-grid {
@@ -592,7 +609,8 @@ svg {
 .user-nav-link,
 .pagination-link,
 .pagination-dots,
-.social-link {
+.social-link,
+.catalog-to-home-link {
   display: block;
   width: 100%;
   height: 100%;
@@ -620,12 +638,13 @@ svg {
   grid-template-columns: 140px 140px;
   grid-template-rows: auto auto 21px 36px 37px;
   gap: 16px 20px;
-  border: 2px solid #e5e5e5;
+  border: 1px solid #e5e5e5;
   border-radius: 4px;
-  margin-right: 14px;
+  box-sizing: border-box;
+  margin-right: 20px;
   margin-bottom: 20px;
   padding: 20px;
-  width: 300px;
+  width: 340px;
   height: auto;
   grid-template-areas:
     "image image"
@@ -680,11 +699,10 @@ svg {
 
 .hotels-list-item-stars {
   grid-area: stars;
-  align-self: center;
-  font-size: 27px;
-  color: #82b3d3;
+  display: flex;
+  align-items: center;
+  gap: 6px;
   margin: 0;
-  line-height: 27px;
 }
 
 .hotels-list-item-rating {
@@ -760,6 +778,12 @@ svg {
   height: 60px;
   cursor: pointer;
   border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.pagination-item:hover,
+.pagination-item:focus {
+  border: 1px solid #82B3D3;
 }
 
 .pagination-item-current {
@@ -784,6 +808,11 @@ svg {
   justify-content: center;
   align-items: center;
   cursor: default;
+}
+
+.pagination-item-current:hover,
+.pagination-item:nth-last-child(2):hover {
+  border: none;
 }
 
 .main-footer {
