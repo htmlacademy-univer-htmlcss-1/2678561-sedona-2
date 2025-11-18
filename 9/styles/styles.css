@@ -223,6 +223,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   line-height: 20px;
   padding: 8px 35px;
   max-height: 36px;
+  outline: none;
 }
 
 .button-main {
@@ -265,6 +266,22 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
 .button-transparent {
   background-color: transparent;
+}
+
+.button-transparent:hover {
+  opacity: 0.6;
+}
+
+.button-transparent:focus {
+  box-shadow: 0 0 0 3px #83b3d3;
+}
+
+.button-transparent:active {
+  opacity: 0.3;
+}
+
+.button-transparent:disabled {
+  opacity: 0.1;
 }
 
 .button-big {
@@ -550,12 +567,13 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   font-weight: 700;
   font-size: 20px;
   line-height: 26px;
+  text-transform: capitalize;
 }
 
 .hotels-filter-list {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 16px;
 }
 
 .hotels-filter-item {
@@ -572,20 +590,21 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   height: 20px;
   background-color: #ffffff;
   outline: none;
+  margin: 0;
 }
 
-.hotels-filter-checkbox:hover,
-.hotels-filter-radio:hover {
+.hotels-filter-item:hover,
+.hotels-filter-item:hover {
   opacity: 0.6;
 }
 
 .hotels-filter-checkbox:focus,
 .hotels-filter-radio:focus {
-  box-shadow: 0 0 0 3px #68a2ca;
+  box-shadow: 0 0 0 3px #83b3d3;
 }
 
-.hotels-filter-checkbox:active,
-.hotels-filter-radio:active {
+.hotels-filter-item:active,
+.hotels-filter-item:active {
   opacity: 0.3;
 }
 
@@ -626,6 +645,11 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   box-sizing: border-box;
 }
 
+.hotels-cost-range:hover,
+.hotels-cost-range:focus {
+  background-color: #e5e5e5;
+}
+
 .hotels-filter-range {
   appearance: none;
   font-weight: 700;
@@ -634,6 +658,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   border: none;
   background-color: transparent;
   width: 82px;
+  outline: none;
 }
 
 .hotels-cost-range-from,
@@ -683,6 +708,15 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   cursor: pointer;
   border: none;
   z-index: 2;
+  outline: none;
+}
+
+.form-range .range-toggle:focus {
+  box-shadow: 0 0 0 3px #83b3d3;
+}
+
+.form-range .range-toggle:active {
+  box-shadow: 0 0 0 2px #83b3d3;
 }
 
 .hidden-buttons-legend {
