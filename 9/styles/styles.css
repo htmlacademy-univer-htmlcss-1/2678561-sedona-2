@@ -202,7 +202,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   justify-content: center;
   align-items: center;
   background-color: #7db54f;
-  border-radius: 9999px;
+  border-radius: 50%;
   width: 20px;
   height: 20px;
   font-weight: 400;
@@ -571,6 +571,22 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   width: 20px;
   height: 20px;
   background-color: #ffffff;
+  outline: none;
+}
+
+.hotels-filter-checkbox:hover,
+.hotels-filter-radio:hover {
+  opacity: 0.6;
+}
+
+.hotels-filter-checkbox:focus,
+.hotels-filter-radio:focus {
+  box-shadow: 0 0 0 3px #68a2ca;
+}
+
+.hotels-filter-checkbox:active,
+.hotels-filter-radio:active {
+  opacity: 0.3;
 }
 
 .hotels-filter-checkbox {
@@ -578,9 +594,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 .hotels-filter-radio {
-  border-radius: 9999px;
-  border: 5px solid #ffffff;
-  box-sizing: border-box;
+  border-radius: 50%;
 }
 
 .hotels-filter-checkbox:checked {
@@ -589,7 +603,13 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   background-position: center;
 }
 
-.hotels-filter-radio:checked {
+.hotels-filter-radio:checked::before {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 10px;
+  transform: translate(50%, 50%);
+  border-radius: 50%;
   background-color: #3f5e72;
 }
 
@@ -632,35 +652,37 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
 .form-range {
   position: relative;
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
 }
 
 .form-range .range-scale {
-  height: 4 px;
+  position: absolute;
+  width: 100%;
+  height: 4px;
   background-color: rgba(255, 255, 255, 0.3);
 }
 
 .form-range .range-bar {
-  width: 72%;
+  position: absolute;
   height: 4px;
   background-color: #fff;
-}
-
-.range-toggle.range-toggle-min {
-  left: 0;
-}
-
-.range-toggle.range-toggle-max {
-  left: 72%;
+  left: var(--min);
+  right: calc(100% - var(--max));
 }
 
 .form-range .range-toggle {
   position: absolute;
-  top: -8px;
+  top: 50%;
+  transform: translate(-50%, -50%);
   width: 20px;
   height: 20px;
-  background-color: #fff;
+  background: #fff;
   border-radius: 5px;
   cursor: pointer;
+  border: none;
+  z-index: 2;
 }
 
 .hidden-buttons-legend {
@@ -1213,7 +1235,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   display: block;
   width: 26px;
   height: 26px;
-  border-radius: 9999px;
+  border-radius: 50%;
 }
 
 .tooltip-icon {
